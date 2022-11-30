@@ -4,16 +4,19 @@ const person = {
   age: 25
 }
 
-const entries = Object.entries(person);
+const keys = Object.keys(person);
+const values = Object.values(person);
 
-for (let entry of entries) {
-  let [key, val] = entry;
-  console.log (key + ': ' + val);
+for (let i = 0; i < keys.length; i++) {
+  console.log(keys[i] + ': ' + values[i])
 }
 
-// I used Object.entries instead of Object.keys because
-// the entry method gives me the key/val information, and
-// through destructuring it's easy to print in whatever format
 
-// is there another method using Object.keys and Object.values
-// separately?
+// version 2, with Object.entries
+
+// const entries = Object.entries(person);
+
+// for (let entry of entries) {
+//   let [key, val] = entry;
+//   console.log(key + ': ' + val);
+// }
