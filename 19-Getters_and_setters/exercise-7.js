@@ -4,29 +4,29 @@ class Person {
       this._lastName = lastName;
       this._age = age;
     }
-    get _firstName () {
-      return this.firstName;
+    get firstName () {
+      return this._firstName;
     }
-    get _lastName () {
-      return this.lastName;
+    get lastName () {
+      return this._lastName;
     }
-    get _age () {
-      return this.age;
+    get age () {
+      return this._age;
     }
     get fullName () {
       return this.firstName + ' ' + this.lastName;
     }
 
-    set _firstName (newVal) {
-      this.firstName = newVal;
+    set firstName (newVal) {
+      this._firstName = newVal;
     }
 
-    set _lastName (newVal) {
-      this.lastName = newVal;
+    set lastName (newVal) {
+      this._lastName = newVal;
     }
 
-    set _age (newVal) {
-      this.age = newVal;
+    set age (newVal) {
+      this._age = newVal;
     }
 }
 
