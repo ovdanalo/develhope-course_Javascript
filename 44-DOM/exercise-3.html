@@ -1,0 +1,28 @@
+<html>
+
+<body>
+  <div id="container">
+    <form>
+      <div id="div-01">
+        <label>First Name:</label>
+        <input type="text" class="form-input" id="firstName" value="Mario" />
+      </div>
+      <div id="div-02">
+        <label>Last Name:</label>
+        <input type="text" class="form-input" id="lastName" value="Rossi" />
+      </div>
+      <div id="div-03">
+        <label>Age:</label>
+        <input type="number" class="form-input" id="age" value="25" />
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
+
+<script>
+[...document.querySelectorAll("form>div")].map(div=>(
+    console.log(`${div.querySelector("label").innerText} ${div.querySelector("input").value}`)
+  ))
+</script>
