@@ -1,17 +1,15 @@
 function uncompletedNotes(notes) {
-  let uncomplete = notes.forEach(task => task.todos
-    .forEach((todo) => {
-      if (todo.done == false) {
-        return console.log(todo.name)
-      }
-    }))
-
-  return uncomplete;
+  
+  let uncompletedTodos = [];
+ 
+  notes.forEach(note => {
+    note.todos.filter(todo => !todo.done).forEach(todo => {
+      uncompletedTodos.push(todo);
+    });
+  });
+  
+  console.log(uncompletedTodos);
 }
-
-// I'm not using a filter, because the function filter can only be used inside arrays,
-// so I should convert back and forth the objects in arrays to use a filter, while
-// I can simply put a condition with an if construct
 
 const notes = [
   {
